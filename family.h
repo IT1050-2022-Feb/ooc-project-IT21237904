@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-class Family : public Policy {  //this is a derived class which stores class specific information
+class Family : public Policy {  // derived class from policy
 	protected : 
 	   char description[50];
 	   int premium; 

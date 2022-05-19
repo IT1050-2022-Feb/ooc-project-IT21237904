@@ -5,6 +5,7 @@
 #include "group.h"
 #include "family.h"
 #include "seniorCitizen.h"
+#include "payment.h"
 
 using namespace std;
 
@@ -28,6 +29,18 @@ int main() {
     g1.	displayDetails(); 
     f1.	displayDetails(); 
     s1.	displayDetails(); 
-    
+
+
+  
+char ch;
+	Policy *P1 = new Policy("Individual", "1423");
+  Policy *P2 = new Policy("Group" , "2311");
+	Payment *O1 = new Payment("001", P1);
+  Payment *O2 = new Payment("002",  P1);
+    cout << "Payments of-" << endl;
+    P1->displayPolicy();
+    cin >> ch;
+
+  
     return 0;
 }
