@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <cstring>
 #include "policy.h"
 #include "individual.h"
@@ -12,16 +12,6 @@ using namespace std;
 //main method
 int main() {
 
-
-
-//creating client objects
-	Client *C1 = new Client("John", "Malabe");
-  Client *C2 = new Client("Vito" , "Malabe");
-	
-//creating payment objects  
-  Payment *P1 = new Payment("001", C1);
-  Payment *P2 = new Payment("002",  C2);
-    
 //creating derived policy objects
   
     Individual i1("p001","goldIndividual","best plan for individual",35000);   
@@ -29,17 +19,13 @@ int main() {
     Family f1("p003","goldFamily","best plan for individual",100000);  
     SeniorCitizen s1("p004","goldSeniorCitizen","best plan for individual",25000);  
 
-
-
-
-
-
-//call functions------------------------------------------------ 
-    i1.	displayDetails();  
-    g1.	displayDetails(); 
-    f1.	displayDetails(); 
-    s1.	displayDetails(); 
-
+//creating client objects
+	Client *C1 = new Client("John", "Malabe" ,i1);
+  Client *C2 = new Client("Vito" , "Malabe",g1);
+	
+//creating payment objects  
+  Payment *P1 = new Payment("001", C1);
+  Payment *P2 = new Payment("002",  C2);
 
   
 

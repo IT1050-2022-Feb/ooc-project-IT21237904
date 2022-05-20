@@ -1,4 +1,4 @@
-//uni directional assosiation with client
+ //uni directional assosiation with client
 #include <iostream>
 #include <string>
 using namespace std;
@@ -10,6 +10,7 @@ class Policy {
 
 	  
 	public:
+     Policy();
 	   void DeletePolicy(); 
 	   void UpdatePolicy();
 	   void	DisplayPolicy();
