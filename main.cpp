@@ -6,14 +6,24 @@
 #include "family.h"
 #include "seniorCitizen.h"
 #include "payment.h"
-
+#include "client.h"
 using namespace std;
 
 //main method
 int main() {
 
-//create objects here--------------------------------------------
 
+
+//creating client objects
+	Client *C1 = new Client("John", "Malabe");
+  Client *C2 = new Client("Vito" , "Malabe");
+	
+//creating payment objects  
+  Payment *P1 = new Payment("001", C1);
+  Payment *P2 = new Payment("002",  C2);
+    
+//creating derived policy objects
+  
     Individual i1("p001","goldIndividual","best plan for individual",35000);   
     Group g1("p002","goldGroup","best plan for individual",500000); 
     Family f1("p003","goldFamily","best plan for individual",100000);  
@@ -32,14 +42,8 @@ int main() {
 
 
   
-char ch;
-	Policy *P1 = new Policy("Individual", "1423");
-  Policy *P2 = new Policy("Group" , "2311");
-	Payment *O1 = new Payment("001", P1);
-  Payment *O2 = new Payment("002",  P1);
-    cout << "Payments of-" << endl;
-    P1->displayPolicy();
-    cin >> ch;
+
+
 
   
     return 0;
